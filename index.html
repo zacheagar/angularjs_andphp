@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title></title>
+  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link href='styles/main.css' rel='stylesheet' type="text/css">
+  <script src="angular.js"></script>
+  <script src="app.js"></script> 
+</head>
+<body ng-app="funwithcountries">
+    <h2>Countries</h2>
+     
+    <div ng-controller="CountryController as countryCtrl">
+     <ul>
+      <li ng-repeat="c in countryCtrl.countries">
+         {{c.name}}
+        <ul>
+        <p ng-repeat="s in c.states">
+        {{s.name}}  
+        </p>
+       
+        </ul>
+        
+    </li>
+  </ul>
+
+ </div>
+
+</body>
+</html>
